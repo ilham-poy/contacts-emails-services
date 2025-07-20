@@ -39,9 +39,9 @@ class sendEmailsController extends Controller
         ];
 
         if ($request->title == 'programmer') {
-            Mail::to('ilhamrafli732@gmail.com')->send(new sendEmails($data));
+            Mail::to('email mee')->send(new sendEmails($data));
         } else {
-            Mail::to('tedyhermawanto@gmail.com')->send(new sendEmails($data));
+            Mail::to('email you')->send(new sendEmails($data));
         }
 
 
