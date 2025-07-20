@@ -43,7 +43,7 @@ class sendEmails extends Mailable
         return new Content(
             view: 'mail.index',
             with: [
-                'title' => $this->data['uiux'],
+                'title' => $this->data['title'],
                 'name' => $this->data['name'],
                 'email' => $this->data['email'],
                 'isi' => $this->data['message'],
