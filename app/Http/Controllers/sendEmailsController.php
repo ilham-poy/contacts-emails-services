@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\sendEmails;
-
+use Illuminate\Support\Env;
 
 class sendEmailsController extends Controller
 {
@@ -38,10 +38,11 @@ class sendEmailsController extends Controller
 
 
         if ($request->title == 'programmer') {
-            Mail::to('email me')->send(new sendEmails($data));
+            Mail::to(env('EMAIL_PROGRAMMER'))->send(new sendEmails($data));
         } elseif ($request->title == 'uiux') {
-            Mail::to('email you')->send(new sendEmails($data));
+            Mail::to(env('EMAIL_UIUX'))->send(new sendEmails($data));
         }
+
 
         return response()->json([
             'status' => true,
