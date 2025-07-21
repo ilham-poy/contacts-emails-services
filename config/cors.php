@@ -6,7 +6,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [env('APP_FRONTEND')],
+    'allowed_origins' => ['https://app-photographer.vercel.app'],
 
     'allowed_origins_patterns' => [],
 
