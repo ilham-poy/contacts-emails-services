@@ -37,7 +37,6 @@
         "DB_HOST": "ktmi3e.h.filess.io",
         "DB_PORT": "3307",
         "DB_DATABASE": "dbContactServices_rocksister",
-        "DB_USERNAME": "dbContactServices_rocksister",
-        "DB_PASSWORD": "24c5b8f2c9ed0f71525660e9d6a2e5bac3e15324"
+        "DB_USERNAME": "dbContactServices_rocksister"
     }
 }
