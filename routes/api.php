@@ -7,4 +7,4 @@ use App\Http\Controllers\sendEmailsController;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-Route::post('api/send', [sendEmailsController::class, 'send']);
+Route::post('/api/send', [sendEmailsController::class, 'send']);
