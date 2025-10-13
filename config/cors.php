@@ -6,7 +6,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://app-photographer.vercel.app', 'http://localhost:3000'],
+    'allowed_origins' => ['https://app-photographer.vercel.app'],
 
     'allowed_origins_patterns' => [],
 
