@@ -41,8 +41,8 @@ class sendEmailsEcommerceController extends Controller
 
 
         if ($request->title === 'buyyer') {
-            Mail::to(env('EMAIL_PROGRAMMER'))->send(new sendEmailsEcommerce($data));
-            // Mail::to(env('EMAIL_SELLER'))->send(new sendEmailsEcommerce($data));
+            // Mail::to(env('EMAIL_PROGRAMMER'))->send(new sendEmailsEcommerce($data));
+            Mail::to(env('EMAIL_SELLER'))->send(new sendEmailsEcommerce($data));
         }
 
 
