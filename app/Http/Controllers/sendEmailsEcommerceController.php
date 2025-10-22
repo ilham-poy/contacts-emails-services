@@ -18,7 +18,7 @@ class sendEmailsEcommerceController extends Controller
             'email' => 'required|email',
             'message' => 'required',
             'quantity' => 'required',
-            'image' => 'required'
+            'image' => 'nullable|array',
         ];
         $data = [
             'title' => $request->title,
@@ -26,7 +26,7 @@ class sendEmailsEcommerceController extends Controller
             'email' => $request->email,
             'message' => $request->message,
             'quantity' => $request->quantity,
-            'image' => $request->image  ?? null,
+            'image' => $request->image ?? 'Tidak Mengirimkan Gambar',
         ];
 
 
@@ -41,8 +41,8 @@ class sendEmailsEcommerceController extends Controller
 
 
         if ($request->title === 'buyyer') {
-            // Mail::to(env('EMAIL_PROGRAMMER'))->send(new sendEmailsEcommerce($data));
-            Mail::to(env('EMAIL_SELLER'))->send(new sendEmailsEcommerce($data));
+            Mail::to(env('EMAIL_PROGRAMMER'))->send(new sendEmailsEcommerce($data));
+            // Mail::to(env('EMAIL_SELLER'))->send(new sendEmailsEcommerce($data));
         }
 
 

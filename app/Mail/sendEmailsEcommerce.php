@@ -40,6 +40,9 @@ class sendEmailsEcommerce extends Mailable
      */
     public function content(): Content
     {
+        $this->data['image'] = !empty($this->data['image'])
+            ? (array) $this->data['image']
+            : [];
         return new Content(
             view: 'ecommerce.index',
             with: [

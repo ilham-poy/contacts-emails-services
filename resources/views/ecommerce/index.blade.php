@@ -21,8 +21,14 @@
         </div>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 12px;">
             <strong>Gambar Pesanan :</strong><br>
-            <img src="{{$images[0]}}" alt="Gambar Pesanan" style="max-width: 100%; height: auto; display: block; margin-top: 10px;">
+            @if(!empty($images) && isset($images[0]))
+            <img src="{{ $images[0] }}" alt="Gambar Pesanan"
+                style="max-width: 100%; height: auto; display: block; margin-top: 10px;">
+            @else
+            <em>Tidak ada gambar yang diunggah.</em>
+            @endif
         </p>
+
 
 
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 12px;"><strong>Jumlah Pesanan:</strong> {{ $quantity }}</p>
