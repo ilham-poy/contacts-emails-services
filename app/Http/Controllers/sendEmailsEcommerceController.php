@@ -26,7 +26,7 @@ class sendEmailsEcommerceController extends Controller
             'email' => $request->email,
             'message' => $request->message,
             'quantity' => $request->quantity,
-            'image' => $request->image,
+            'image' => $request->image  ?? null,
         ];
 
 

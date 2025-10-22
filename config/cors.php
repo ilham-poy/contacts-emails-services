@@ -6,7 +6,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://app-photographer.vercel.app', 'https://nasywaartspace.vercel.app',],
+    'allowed_origins' => ['https://app-photographer.vercel.app', 'https://nasywaartspace.vercel.app'],
 
     'allowed_origins_patterns' => [],
 
